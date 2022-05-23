@@ -1,31 +1,30 @@
 import './App.css';
-import img from "./images/cruiseship.jpg"
-import LoginButton from './login';
-import LogoutButton from './logout';
+import Profile from './views/profile';
+import Home from './views/home'
+import NavBar from './components/nav-bar';
+import { Route, Routes } from "react-router-dom";
 
-function CruiseShipImage(){
-  return <img src={img} alt="Cruise1, Ahoi!"/>
- }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      {CruiseShipImage()}      
-        <p>
-          Cruise1
-        </p>
-        <LoginButton />
-        <LogoutButton />
-      
+        <NavBar />      
+        <div className="container flex-grow-1">
+          <div className="mt-5">
+            <Routes>
+              <Route path="/" exact={true.toString()} element={<Home />} />
+              <Route path="/profile" exact={false} element={<Profile />} />
+            </Routes>
+          </div>
+        </div>
       </header>
+      <body className='App-body'>
+
+      </body>
     </div>
   );
 }
 
 export default App;
 
-
-// JS
-//var img = document.createElement("img");
-//img.src = "../ressources/cruiseship.jpg";

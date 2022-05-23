@@ -1,30 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-//import ReactDOM from "react-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
+import { BrowserRouter as Router } from 'react-router-dom';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-// ReactDOM.render(
-//   <Auth0Provider
-//     domain="n1xx0n.eu.auth0.com"
-//     clientId="B3NfaSTOOMW0pSxVeKlNyBcFPf4IbwwX"
-//     redirectUri={window.location.origin}  // place to go after login with auth0
-//   >
-//   <App />
-//   </Auth0Provider>,
-//   document.getElementById("root")
-// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
 root.render(
   <Auth0Provider
-    domain="n1xx0n.eu.auth0.com"
-    clientId="B3NfaSTOOMW0pSxVeKlNyBcFPf4IbwwX"
-    redirectUri={window.location.origin}  // place to go after login with auth0
+    domain={domain}
+    clientId={clientId}
+    redirectUri={window.location.origin} 
   >
-  <App />
-  </Auth0Provider>,
-  // document.getElementById("root")
+    <Router>
+      <App />
+    </Router>
+  </Auth0Provider>
 );
+
