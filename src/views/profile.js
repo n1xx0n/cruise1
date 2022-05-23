@@ -7,7 +7,6 @@ const styleObj = {
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  //const { name, picture, email } = user;
 
   if (isLoading) {
     return <div>Loading profile...</div>;
@@ -25,7 +24,7 @@ const Profile = () => {
             <p>Email not verified!</p>
         }
         <div className="row" style={styleObj}>
-           {/* <pre className="col-8 text-light bg-dark p-4"> */}
+           {/* <pre className="col-8 text-light bg-dark p-4 center"> */}
              {JSON.stringify(user, null, 2)}
            {/* </pre> */}
         </div>

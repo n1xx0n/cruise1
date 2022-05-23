@@ -4,7 +4,6 @@ import Home from './views/home'
 import NavBar from './components/nav-bar';
 import { Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
@@ -19,9 +18,6 @@ function App() {
           </div>
         </div>
       </header>
-      <body className='App-body'>
-
-      </body>
     </div>
   );
 }
