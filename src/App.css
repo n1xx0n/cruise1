@@ -34,11 +34,19 @@
   background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ol {
+  background: #a0cefc;
+  padding: 20px;
+}
+
+ol li {
+  text-align: left;
+  background: #cce5ff;
+  color: rgb(0, 28, 139);
+  margin: 5px;
+}
+
+.photo {
+  height: 50%;
+  width:  50%;
 }
